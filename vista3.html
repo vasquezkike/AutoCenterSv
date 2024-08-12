@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>AutoCenterSV - Iniciar Sesión</title>
+    <link rel="stylesheet" href="../css/vista3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.jpg" alt="AutoCenterSV">
+                <h3 id="back" style="color: rgb(250, 247, 242); margin-left:37%; 
+                margin-top: -30%; font-style: italic; font-family: 'Medula One', sans-serif; font-size: 1.3em;">
+                 AutoCenterSV
+               </h3>
+            </div>
+            <div class="user-location">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>El Salvador</span>
+                </div>
+            </div>  
+        </div>
+    </header>
+
+    <main class="login-container">
+        <div class="login-box">
+            <div class="login-left">
+                <h2>¿Ya tienes cuenta? Escribe tus datos aquí</h2>
+
+                <form id="loginFormMobile1" onsubmit="validarLogin(event, 'emailInputMobile1', 'passwordInputMobile1')">
+                    
+                    <div class="form-group">
+                        <input type="email" id="emailInputMobile1" placeholder="Email o número de teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="passwordInputMobile1" placeholder="Contraseña" required>
+                    </div>
+                    <button type="submit" class="btn-red">Ingresar</button>
+                </form>
+
+            </div>
+            <div class="login-divider">
+                <span>O</span>
+            </div>
+            <div class="login-right">
+                <h2>¿Aun no tienes cuenta?</h2>
+             <button id="btnRegistroNuevoPC" class="btn-green">Registrarse</button>
+               
+                          <p>Login con Facebook o Google</p>
+                <p>Ingresa o registra una cuenta nueva confirmando tu usuario y contraseña de la plataforma seleccionada.</p>
+                <button id="btnFacebookPC" class="btn-blue"><i class="fab fa-facebook-f"></i> Continuar con Facebook</button>
+                <button id="btnGooglePC" class="btn-red-google"><i class="fab fa-google"></i> Continuar con Google</button>
+            </div>
+        </div>
+
+
+
+
+        <!-- Nueva sección para móviles -->
+        <div class="login-box-mobile mobile-only">
+            <div class="login-left">
+                <h2>¿Ya tienes cuenta? Escribe tus datos aquí</h2>
+
+                <form id="loginFormMobile2" onsubmit="validarLogin(event, 'emailInputMobile2', 'passwordInputMobile2')">
+                    <div class="form-group">
+                        <input type="email" id="emailInputMobile2" placeholder="Email o número de teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="passwordInputMobile2" placeholder="Contraseña" required>
+                    </div>
+                    <button type="submit" class="btn-red">Ingresar</button>
+                </form>
+
+
+            </div>
+            <div class="login-right">
+                <h2>¿Aun no tienes cuenta?</h2>
+                <button id="btnRegistroMobile" class="btn-green">Registrarse</button>
+                <p>Login con Facebook o Google</p>
+            </div>
+            <div class="social-buttons">
+                <button id="btnFacebookMobile" class="btn-blue"><i class="fab fa-facebook-f"></i> Continuar con Facebook</button>
+                <button id="btnGoogleMobile" class="btn-red-google"><i class="fab fa-google"></i> Continuar con Google</button>
+            </div>
+        </div>
+
+        
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>AUTOCENTERSV</h3>
+                <ul>
+                    <li onclick="showAboutUs()">Acerca de Nosotros</li>
+                    <li onclick="showContactUs()">Contáctenos</li>
+                    <li onclick="showHighlights()">Resaltadores</li>
+                    <li onclick="showBusiness()">AutoCenterSV Business</li>
+                    <li onclick="showBlueBook()">BlueBook</li>
+                    <li onclick="showPropertyStats()">Estadísticas de Propiedades</li>
+                    <li onclick="showBestPractices()">Glosario de mejores prácticas</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>SOPORTE TÉCNICO</h3>
+                <ul>
+                    <li onclick="showMessenger()">Messenger</li>
+                    <li onclick="showWhatsApp()">WhatsApp Messenger</li>
+                    <li onclick="showNews()">Noticias</li>
+                    <li onclick="showUserForum()">Foro de Usuarios</li>
+                    <li onclick="showHelp()">Solicite Ayuda</li>
+                    <li onclick="showRegister()">Registro</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ANUNCIOS CLASIFICADOS</h3>
+                <ul>
+                    <li onclick="showAdPost()">Publique un anuncio</li>
+                    <li onclick="showClassifieds()">Clasificados</li>
+                    <li onclick="showRealEstate()">Bienes Raíces</li>
+                    <li onclick="showAutomobiles()">Automóviles</li>
+                    <li onclick="showRealEstateEn()">Real Estate</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>TÉRMINOS LEGALES</h3>
+                <ul>
+                    <li onclick="window.location.href='acerca.html#security-center'">Centro de Seguridad</li>
+                    <li onclick="window.location.href='acerca.html#privacy-policy'">Política de Privacidad</li>
+                    <li onclick="window.location.href='acerca.html#terms-of-service'">Condiciones del Servicio</li>
+                    <li onclick="window.location.href='acerca.html#fees'">Tarifas</li>
+                    <li onclick="window.location.href='acerca.html#refund-policy'">Políticas de Reembolsos</li>
+                    <li onclick="window.location.href='acerca.html#security-tips'">Consejos de Seguridad</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AutoCenterSV. Marca Registrada. Teléfono: +503 2113-0241</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/nathalia.guardado.37?mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/v.aless_22?igsh=MXAzejFoMzdranRrcg=="><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/ere8ru?t=vPzEBpVMJyLkWdhpblfOig&s=08"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/funcion.js"></script>
+    <script src="../js/alertasBtn.js"></script>
+    <script src="../js/alertasLink.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    
+</body>
+    
+
+
+
+
+
+</html>
