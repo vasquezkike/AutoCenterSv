@@ -1,0 +1,607 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+}
+
+.header-container .logo img {
+    height: 50px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar select,
+.search-bar input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-bar button.buscar {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}  
+.search-box button.buscar {
+   
+    width: 15%;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-box input{
+    color: white;  
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sidebar input[type="text"]{
+
+
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.user-location {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.user-location .location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-location button.publicar {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.publish-ad {
+    padding: 50px;
+    background-color: white;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.publish-ad h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+                   /* FIN  DEL HEADER*/
+
+.catalog-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #e4e4e4;
+    border-right: 1px solid #ccc;
+    border-radius: 10px 0 0 10px;
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.sidebar input[type="range"],
+.sidebar select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.sidebar button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.sidebar button i {
+    margin-right: 5px;
+}
+
+.catalog {
+    flex: 1;
+    padding: 20px;
+}
+
+.catalog h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los productos */
+}
+
+
+.product-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 60%;
+    border-radius: 10px;
+}
+
+.product-info {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.product-info h3 {
+    margin: 0;
+    color: #333;
+}
+
+.product-info p {
+    margin: 5px 0;
+    color: #e74c3c;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(138, 136, 136);
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+    color: #555;
+    cursor: pointer;
+}
+
+.footer-section ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 20px;
+    color: #555;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-bottom .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-bottom .social-icons i {
+    font-size: 20px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.footer-bottom .social-icons i:hover {
+    color: #000;
+}
+.mobile-only-btn {
+    display: none; /* El botón no será visible por defecto para que no sea visible en laptops y tabletas*/
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Evita el scroll lateral */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit; /* Asegura que el padding y el border no aumenten el ancho de los elementos */
+    }
+    
+    .container {
+        max-width: 100%; /* Asegura que los contenedores no se excedan del ancho del viewport */
+    }
+    .header-container {
+        height: 50%;
+        width: 100%;
+        padding-left: 5px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 40px; /* Ajustar el tamaño del logo */
+        margin: 0; /* Elimina márgenes para una mejor alineación */
+    }
+    #back {
+       display: none;
+    }
+    h4 span {
+        font-size: 0.5em; /* Reduce el tamaño de la fuente en los span dentro de h4 */
+    }
+   
+
+    .search-bar {
+        margin: 0;
+        width: auto;
+        flex: 0.99;
+        justify-content: flex-start;
+    }
+
+    .search-bar select,
+    .search-bar input {
+        width: 30%;
+        padding: 5px;
+        font-size: 11px; /* Tamaño de texto más pequeño */
+    }
+
+    .search-bar button.buscar {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    .user-location {
+        width: auto;
+        flex-direction: column;
+        gap: 1px; /* Reduce el espacio entre los íconos */
+    }
+
+    .user-location i {
+        margin-top: -20%;
+        font-size: 10px; /* Tamaño más pequeño para los íconos */
+    }
+    .user-location span {
+        margin-top: -20%;
+        font-size: 10px; /* Tamaño más pequeño para los íconos */
+    }
+
+    .user-location button.publicar {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+
+                                   /* CSS PARA EL MAIN*/
+                                   
+  .catalog-container {
+        display: flex;
+        flex-direction: row; /* Sidebar a la izquierda y catálogo a la derecha */
+        padding: 10px;
+        gap: 10px;
+    }
+    .categories{
+        font-size: 10px;
+        padding-left: 1%;
+        padding: 0%;
+    }
+    
+    
+    
+
+    /* Ajuste para la barra lateral (subcategorías) */
+    .sidebar {
+        width: 35%; /* Ajusta el ancho del sidebar */
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        font-size: 12px; /* Reduce el tamaño de la fuente */
+    }
+
+    .search-box {
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .search-box input {
+        width: 6%; /* Ajusta el ancho del campo de búsqueda */
+        font-size: 9px; /* Reduce el tamaño de la fuente */
+    }
+
+    .search-box button.buscar{
+        margin-left: 5px;
+        height: 35px;
+        width: 40px;
+        font-size: 1px; /* Reduce el tamaño del botón */
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+
+    .search-box i {
+        font-size: 14px; /* Reduce el tamaño del ícono de búsqueda */
+    }
+
+    .sidebar h3 {
+        font-size: 14px; /* Ajusta el tamaño de los encabezados */
+        margin-bottom: 5px;
+    }
+
+    .sidebar ul, .sidebar .range-slider {
+        margin-bottom: 10px;
+    }
+
+    .sidebar input[type="checkbox"] {
+        transform: scale(0.8); /* Reduce el tamaño de los checkboxes */
+    }
+
+    .sidebar .range-slider input {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .location-box input {
+        width: calc(100% - 30px); /* Ajusta el ancho del campo de ubicación */
+        padding: 5px;
+        font-size: 12px; /* Reduce el tamaño de la fuente */
+    }
+
+    .location-box i {
+        font-size: 16px; /* Reduce el tamaño del ícono */
+        margin-left: 5px;
+    }
+
+    .mobile-only-btn {
+        display: block; /* Mostrar el botón en móviles */
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .mobile-only-btn:hover {
+        background-color: #c0392b; /* Cambio de color al pasar el ratón */
+    }
+    /* Ocultar la sección extra por defecto en móviles */
+.hidden-mobile {
+    display: none;
+}
+
+
+
+
+    /* Ajuste para la sección de catálogo */
+    .catalog {
+        width: 65%; /* Ajusta el ancho de la sección de catálogo */
+        padding: 10px;
+    }
+
+    .catalog h1 {
+        font-size: 18px; /* Reduce el tamaño del título */
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .product-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .product-item img {
+        width: 100px; /* Reduce el tamaño de las imágenes */
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .product-info h3 {
+        font-size: 16px; /* Ajusta el tamaño del nombre del producto */
+        margin: 0;
+    }
+
+    .product-info p {
+        font-size: 14px; /* Reduce el tamaño de la información del producto */
+        margin: 0;
+    }
+
+    /* Ajuste para la paginación */
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 20px;
+    }
+
+    .pagination button {
+        padding: 5px 8px; /* Reduce el padding de los botones de paginación */
+        font-size: 5px; /* Reduce el tamaño de la fuente */
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        background-color: #595858;
+        cursor: pointer;
+    }
+
+    .pagination button:hover {
+        background-color: #e0e0e0;
+    }
+
+
+
+     /*  FOOTER*/ 
+      /* Ajuste de las secciones del footer para ser más compactas */
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 5px; /* Reduce el padding del contenedor principal */
+        gap: 5px; /* Reduce el espacio entre las secciones */
+    }
+
+    .footer-section {
+        flex: 1 1 calc(50% - 10px); /* Mantiene dos secciones por fila */
+        min-width: 140px; /* Reduce el ancho mínimo para compactar más las secciones */
+        box-sizing: border-box;
+        padding: 0 5px; /* Reduce el padding de las secciones */
+    }
+
+    .footer-section h3 {
+        font-style:italic;
+        font-size: 10px; /* Reduce el tamaño de la fuente del título */
+        margin-bottom: 3px; /* Reduce el margen inferior del título */
+        text-align: center;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .footer-section ul li {
+        font-size: 10px; /* Reduce el tamaño de la fuente de los elementos de la lista */
+        margin-bottom: 2px; /* Reduce el margen inferior de los elementos de la lista */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px; /* Reduce el padding superior de la sección inferior */
+        gap: 0px;
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+        margin-left: 5px;
+        padding-bottom: 20px;
+        font-size: 9px; /* Reduce el tamaño de la fuente del texto del pie de página */
+    }
+
+    .social-icons {
+        
+        margin-left: 60%;
+        display: flex;
+        justify-content: center;
+        gap: 0px; /* Reduce el espacio entre íconos */
+    }
+
+    .social-icons a {
+        font-size: 16px; /* Reduce el tamaño de los íconos */
+        color: #555;
+        transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: #000;
+    }
+}

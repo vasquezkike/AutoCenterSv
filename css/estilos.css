@@ -1,0 +1,526 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+}
+
+.header-container .logo img {
+    height: 50px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar select,
+.search-bar input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-bar button.buscar {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-location {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.user-location .location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-location button.publicar {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.publish-ad {
+    padding: 50px;
+    background-color: white;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.publish-ad h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+                   /* FIN  DEL HEADER*/
+
+
+
+
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #e0e0e0;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #333;
+}
+.categories {
+    margin-left: 10%;
+    margin-right: 10%;
+
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+
+/* Centrar los 3 elementos en la segunda fila y moverlos ligeramente a la derecha */
+.categories li:nth-child(5),
+.categories li:nth-child(6),
+.categories li:nth-child(7) {
+    grid-column: span 1 / span 1;
+    justify-self: center;
+}
+
+/* Mover la segunda fila ligeramente hacia la derecha */
+.categories li:nth-child(5) {
+    grid-column-start: 3; /* Empieza en la tercera columna */
+}
+
+
+
+.categories button {
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.categories button span {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+.featured {
+    padding: 40px 0;
+    background-color: white;
+}
+
+.featured h2 {
+    margin: 0 0 30px;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+}
+
+.featured-listings {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.listing {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+.listing img {
+    width: 100%;
+    height: auto;
+}
+
+.listing-details {
+    padding: 15px;
+}
+
+.listing-details h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.listing-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.listing-details .price {
+    font-size: 20px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.listing-info {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pagination button {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: rgb(138, 136, 136);
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+    color: #555;
+    cursor: pointer;
+}
+
+.footer-section ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 20px;
+    color: #555;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-bottom .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-bottom .social-icons i {
+    font-size: 20px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.footer-bottom .social-icons i:hover {
+    color: #000;
+}
+
+
+
+
+@media (max-width: 768px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Evita el scroll lateral */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit; /* Asegura que el padding y el border no aumenten el ancho de los elementos */
+    }
+    
+    .container {
+        max-width: 100%; /* Asegura que los contenedores no se excedan del ancho del viewport */
+    }
+    
+        
+        .header-container {
+            height: 100%;
+            width: 100%;
+            padding-left: 5px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+          #back {
+       display: none;
+    }
+    h4 span {
+        font-size: 0.5em; /* Reduce el tamaño de la fuente en los span dentro de h4 */
+    }
+    
+        .logo img {
+            height: 40px; /* Ajustar el tamaño del logo */
+            margin: 0; /* Elimina márgenes para una mejor alineación */
+        }
+    
+        .search-bar {
+            margin: 0;
+            width: auto;
+            flex: 0.99;
+            justify-content: flex-start;
+        }
+    
+        .search-bar select,
+        .search-bar input {
+            width: 30%;
+            padding: 5px;
+            font-size: 11px; /* Tamaño de texto más pequeño */
+        }
+    
+        .search-bar button.buscar {
+            padding: 5px 10px;
+            font-size: 11px;
+        }
+    
+        .user-location {
+            width: auto;
+            flex-direction: column;
+            gap: 1px; /* Reduce el espacio entre los íconos */
+        }
+    
+        .user-location i {
+            margin-top: -20%;
+            font-size: 10px; /* Tamaño más pequeño para los íconos */
+        }
+        .user-location span {
+            margin-top: -20%;
+            font-size: 10px; /* Tamaño más pequeño para los íconos */
+        }
+    
+        .user-location button.publicar {
+            padding: 5px 10px;
+            font-size: 12px;/*fin del header para moviloes */
+        }
+        .publish-ad {
+            padding: 20px;
+            margin: 10px;
+            max-width: 100%;
+        }
+    
+        .publish-ad h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /*//*/*/*/*/
+        /* Ajustes para las categorías */
+    .categories {
+        width: 95%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en las dos primeras filas */
+        gap: 5px; /* Espacio entre categorías */
+        justify-content: center; /* Centra las categorías en la pantalla */
+        margin-top: 20px;
+    }
+
+    .categories button {
+        padding: 5px 8px; /* Tamaño pequeño del botón */
+        font-size: 10px; /* Tamaño pequeño de la fuente */
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    /* Centrar el último botón en la última fila */
+    .categories button:nth-child(7) {
+        grid-column: 2 / span 1; /* Coloca el séptimo elemento en la segunda columna, centrado */
+        justify-self: center; /* Asegura que se centre dentro de la columna */
+    }
+
+    /* Ajustes para anuncios destacados */
+    .featured-listings {
+        display: flex;
+        justify-content: space-around; /* Distribuye uniformemente los anuncios */
+        align-items: center;
+        flex-wrap: wrap; /* Permite que se mantengan en una fila */
+        gap: 10px;
+    }
+
+    .listing {
+        flex: 1 1 30%; /* Ocupa un 30% del espacio, permitiendo 3 en una fila */
+        margin-bottom: 20px;
+    }
+
+    .listing img {
+        height: auto;
+        width: 100%;
+    }
+
+    .listing-details h3 {
+        font-size: 16px;
+    }
+
+    .listing-details p {
+        font-size: 12px;
+    }
+
+    .listing-details .price {
+        font-size: 18px;
+    }
+
+    .listing-info {
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    /* Ajustes para la paginación */
+    .pagination {
+        margin-top: 20px;
+    }
+
+    .pagination button {
+        padding: 8px;
+        font-size: 12px;
+    }
+        
+        
+
+
+
+
+
+
+
+
+          /*  FOOTER*/ 
+      /* Ajuste de las secciones del footer para ser más compactas */
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 5px; /* Reduce el padding del contenedor principal */
+        gap: 5px; /* Reduce el espacio entre las secciones */
+    }
+
+    .footer-section {
+        flex: 1 1 calc(50% - 10px); /* Mantiene dos secciones por fila */
+        min-width: 140px; /* Reduce el ancho mínimo para compactar más las secciones */
+        box-sizing: border-box;
+        padding: 0 5px; /* Reduce el padding de las secciones */
+    }
+
+    .footer-section h3 {
+        font-style:italic;
+        font-size: 10px; /* Reduce el tamaño de la fuente del título */
+        margin-bottom: 3px; /* Reduce el margen inferior del título */
+        text-align: center;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .footer-section ul li {
+        font-size: 10px; /* Reduce el tamaño de la fuente de los elementos de la lista */
+        margin-bottom: 2px; /* Reduce el margen inferior de los elementos de la lista */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px; /* Reduce el padding superior de la sección inferior */
+        gap: 0px;
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+        margin-left: 5px;
+        padding-bottom: 20px;
+        font-size: 9px; /* Reduce el tamaño de la fuente del texto del pie de página */
+    }
+
+    .social-icons {
+        
+        margin-left: 60%;
+        display: flex;
+        justify-content: center;
+        gap: 0px; /* Reduce el espacio entre íconos */
+    }
+
+    .social-icons a {
+        font-size: 16px; /* Reduce el tamaño de los íconos */
+        color: #555;
+        transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: #000;
+    }
+
+    }    

@@ -1,0 +1,455 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+}
+
+.header-container .logo img {
+    height: 50px;
+}
+
+.user-location {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.user-location .location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Login Container */
+.login-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-box {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.login-left, .login-right {
+    flex: 1;
+    padding: 40px;
+}
+
+.login-left h2, .login-right h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.login-divider span {
+    transform: rotate(90deg);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group i {
+    font-size: 18px;
+    color: #888;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.btn-red {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-red-google {
+    background-color: #db4437;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-green {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn-blue {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(138, 136, 136);
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+    color: #555;
+    cursor: pointer;
+}
+
+.footer-section ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 20px;
+    color: #555;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-bottom .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-bottom .social-icons i {
+    font-size: 20px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.footer-bottom .social-icons i:hover {
+    color: #000;
+}
+
+.mobile-only {
+    display: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Evita el scroll lateral */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit; /* Asegura que el padding y el border no aumenten el ancho de los elementos */
+    }
+    #back {
+        display: none;
+     }
+
+    .container {
+        max-width: 100%; /* Asegura que los contenedores no se excedan del ancho del viewport */
+   
+    }
+    .login-box {
+        display: none; /* Oculta la versión de escritorio en móviles */
+    }
+    .login-left{
+        margin-top: 20%;
+        width: 100%;
+        padding: 0;
+    }
+    .login-right{
+        margin-left: 10%;
+        margin-top: 20%;
+        width: 90%;
+        padding: 0;
+    }
+
+
+    .login-container{
+        width: 100%;
+        padding: 0%;
+    }
+.login-box-mobile{
+    width: 100%;
+    padding: 0%;
+}
+
+    .login-box-mobile {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas para las secciones */
+        gap: 10px; /* Espacio entre las columnas */
+        align-items: start;
+        text-align: center; /* Centrar el texto */
+        width: 100%; /* Asegura que ocupe el 100% del ancho */
+        padding: 0 10px; /* Asegura que tenga un pequeño espacio a los lados */
+        box-sizing: border-box; /* Asegura que los elementos respeten el ancho total */
+    }
+
+ 
+    .login-box-mobile .login-left h2,
+    .login-box-mobile .login-right h2 {
+        font-size: 1em; /* Ajustar tamaño de las letras */
+        margin-bottom: 10px;
+        line-height: 1.2em; /* Reducir el espacio entre líneas */
+    }
+
+    .login-box-mobile .form-group {
+        width: 100%; /* Asegura que los grupos de formularios ocupen el ancho completo */
+        margin-bottom: 15px;
+    }
+
+    .login-box-mobile .form-group input,
+    .login-box-mobile  {
+        padding: 7px;
+        font-size: 0.5em; /* Reducir tamaño de texto en inputs e íconos */
+        width:99%; /* Asegura que los inputs ocupen el ancho completo */
+        
+    }
+    .form-group i{
+        font-size: 1em;
+
+    }
+    .login-box-mobile .forgot-password {
+        margin-left: 25%;
+        font-size: 0.85em; /* Tamaño de texto en el enlace */
+        margin-top: 5px;
+        display: block;
+        text-align: left; /* Alinea a la izquierda para mejor legibilidad */
+    }
+
+    .login-box-mobile .btn-green {
+        font-size: 0.9em; /* Tamaño de texto en botones */
+        padding: 10px;
+        width: 100%; /* Asegura que los botones ocupen el ancho completo */
+        margin-bottom: 10px;
+    }
+    .login-box-mobile .btn-red{
+        margin-bottom: 0;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        width: 80%;
+        height: auto;
+        margin-left: -2%;
+        font-size: 0.9em;
+        margin-top: -6%;
+    }
+
+
+    .login-box-mobile .social-buttons {
+        grid-column: 1 / 3; /* Ocupa ambas columnas */
+        display: flex;
+        flex-direction: column; /* Botones uno debajo del otro */
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px; /* Espacio arriba */
+    }
+
+    .login-box-mobile .btn-blue,
+    .login-box-mobile .btn-red-google {
+        width: 90%; /* Asegura que los botones ocupen el ancho completo */
+        margin: 5px 0;
+        padding: 10px;
+        font-size: 0.9em;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .login-box-mobile .btn-blue i,
+    .login-box-mobile .btn-red-google i {
+        margin-right: 10px;
+        font-size: 1.2em; /* Ajuste del tamaño del ícono */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+  /*  FOOTER*/ 
+      /* Ajuste de las secciones del footer para ser más compactas */
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 5px; /* Reduce el padding del contenedor principal */
+        gap: 5px; /* Reduce el espacio entre las secciones */
+    }
+
+    .footer-section {
+        flex: 1 1 calc(50% - 10px); /* Mantiene dos secciones por fila */
+        min-width: 140px; /* Reduce el ancho mínimo para compactar más las secciones */
+        box-sizing: border-box;
+        padding: 0 5px; /* Reduce el padding de las secciones */
+    }
+
+    .footer-section h3 {
+        font-style:italic;
+        font-size: 10px; /* Reduce el tamaño de la fuente del título */
+        margin-bottom: 3px; /* Reduce el margen inferior del título */
+        text-align: center;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .footer-section ul li {
+        font-size: 10px; /* Reduce el tamaño de la fuente de los elementos de la lista */
+        margin-bottom: 2px; /* Reduce el margen inferior de los elementos de la lista */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px; /* Reduce el padding superior de la sección inferior */
+        gap: 0px;
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+        margin-left: 5px;
+        padding-bottom: 20px;
+        font-size: 9px; /* Reduce el tamaño de la fuente del texto del pie de página */
+    }
+
+    .social-icons {
+        
+        margin-left: 60%;
+        display: flex;
+        justify-content: center;
+        gap: 0px; /* Reduce el espacio entre íconos */
+    }
+
+    .social-icons a {
+        font-size: 16px; /* Reduce el tamaño de los íconos */
+        color: #555;
+        transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: #000;
+    }
+    
+}

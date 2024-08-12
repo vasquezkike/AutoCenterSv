@@ -1,0 +1,132 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h4 {
+    color: #007bff;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffd700;
+}
+
+/* Contenido principal */
+.container {
+    margin-top: 30px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+/* Formularios */
+.form-control {
+    border-radius: 0.25rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Listas y tablas */
+.list-group-item {
+    border: none;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    .navbar-brand {
+        font-size: 16px;
+    }
+
+    .social-icons a {
+        font-size: 1.25rem;
+    }
+}
