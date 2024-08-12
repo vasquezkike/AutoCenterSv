@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>AutoCenterSV</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.jpg" alt="AutoCenterSV">
+
+                <h3 id="back" style="color: rgb(250, 247, 242); margin-left:37%; 
+                margin-top: -30%; font-style: italic; font-family: 'Medula One', sans-serif; font-size: 1.3em;">
+                 AutoCenterSV
+               </h3>
+
+                </div>
+            <div class="search-bar">
+                <select onchange="redirectToPage(this)">
+                    <option value="" disabled selected>Categorías</option>
+                    <option value="compraVenta.html">Inicio</option>
+                    <option value="vehiculosNuevos.html">Autos Nuevos</option>
+                    <option value="autosUsados.html">Autos Usados</option>
+                    <option value="camionesBuses.html">Camiones y Buses</option>
+                    <option value="equipoPesado.html">Equipo Pesado</option>
+                    <option value="motocicletas.html">Motocicletas</option>
+                    <option value="alquilerAutos.html">Alquiler de Autos</option>
+                    <option value="alquilerMotos.html">Alquiler de Motos</option>
+                </select>
+                <input type="text" placeholder="Buscar" id="searchInputSidebar">
+                <button class="buscar" onclick="buscarPagina('searchInputSidebar')"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-location">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>El Salvador</span>
+                </div>
+                <button onclick="window.location.href='publicarAnuncio.html'" class="publicar">Publicar +</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Compra y venta de vehículos</h1>
+            <div class="categories">
+                <button onclick="window.location.href='autosUsados.html'">Autos usados <span>1,887 anuncios</span></button>
+                <button onclick="window.location.href='vehiculosNuevos.html'">Autos nuevos <span>1,004 anuncios</span></button>
+                <button onclick="window.location.href='camionesBuses.html'">Camiones y buses <span>335 anuncios</span></button>
+                <button onclick="window.location.href='equipoPesado.html'">Equipo pesado <span>107 anuncios</span></button>
+                <button class="mover" onclick="window.location.href='motocicletas.html'">Motocicletas <span>2,031 anuncios</span></button>
+                <button onclick="window.location.href='alquilerAutos.html'">Alquiler de autos <span>338 anuncios</span></button>
+                <button onclick="window.location.href='alquilerMotos.html'">Alquiler de motos <span>1,992 anuncios</span></button>
+            </div>
+        </section>
+
+        <section class="featured">
+            <h2>Anuncios destacados:</h2>
+            <div class="featured-listings">
+                <div class="listing">
+                    <img src="../img/datsun.png" alt="Datsun 120Y">
+                    <div class="listing-details">
+                        <h3>Datsun 120Y</h3>
+                        <p>Sensuntepeque</p>
+                        <p class="price">$3,750</p>
+                        <div class="listing-info">
+                            <span><i class="fas fa-calendar-alt"></i> 1979</span>
+                            <span><i class="fas fa-cogs"></i> Manual</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="listing">
+                    <img src="../img/mazda3.png" alt="Mazda 3">
+                    <div class="listing-details">
+                        <h3>Mazda 3</h3>
+                        <p>San Salvador</p>
+                        <p class="price">$13,000</p>
+                        <div class="listing-info">
+                            <span><i class="fas fa-calendar-alt"></i> 2010</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 38,011 km</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="listing">
+                    <img src="../img/nissanRogue.png" alt="Nissan Rogue">
+                    <div class="listing-details">
+                        <h3>Nissan Rogue</h3>
+                        <p>Quezaltepeque</p>
+                        <p class="price">$22,000</p>
+                        <div class="listing-info">
+                            <span><i class="fas fa-calendar-alt"></i> 2024</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 11,034 km</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <button onclick="mostrarAnuncios(1)">1</button>
+                <button onclick="mostrarAnuncios(2)">2</button>
+                <button onclick="mostrarAnuncios(3)">3</button>
+                <button onclick="mostrarAnuncios(4)">4</button>
+                <button onclick="mostrarAnuncios(5)">5</button>
+                <button onclick="mostrarAnuncios('next')">Siguiente</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>AUTOCENTERSV</h3>
+                <ul>
+                    <li onclick="showAboutUs()">Acerca de Nosotros</li>
+                    <li onclick="showContactUs()">Contáctenos</li>
+                    <li onclick="showHighlights()">Resaltadores</li>
+                    <li onclick="showBusiness()">AutoCenterSV Business</li>
+                    <li onclick="showBlueBook()">BlueBook</li>
+                    <li onclick="showPropertyStats()">Estadísticas de Propiedades</li>
+                    <li onclick="showBestPractices()">Glosario de mejores prácticas</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>SOPORTE TÉCNICO</h3>
+                <ul>
+                    <li onclick="showMessenger()">Messenger</li>
+                    <li onclick="showWhatsApp()">WhatsApp Messenger</li>
+                    <li onclick="showNews()">Noticias</li>
+                    <li onclick="showUserForum()">Foro de Usuarios</li>
+                    <li onclick="showHelp()">Solicite Ayuda</li>
+                    <li onclick="showRegister()">Registro</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ANUNCIOS CLASIFICADOS</h3>
+                <ul>
+                    <li onclick="showAdPost()">Publique un anuncio</li>
+                    <li onclick="showClassifieds()">Clasificados</li>
+                    <li onclick="showRealEstate()">Bienes Raíces</li>
+                    <li onclick="showAutomobiles()">Automóviles</li>
+                    <li onclick="showRealEstateEn()">Real Estate</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>TÉRMINOS LEGALES</h3>
+                <ul>
+                    <li onclick="window.location.href='acerca.html#security-center'">Centro de Seguridad</li>
+                    <li onclick="window.location.href='acerca.html#privacy-policy'">Política de Privacidad</li>
+                    <li onclick="window.location.href='acerca.html#terms-of-service'">Condiciones del Servicio</li>
+                    <li onclick="window.location.href='acerca.html#fees'">Tarifas</li>
+                    <li onclick="window.location.href='acerca.html#refund-policy'">Políticas de Reembolsos</li>
+                    <li onclick="window.location.href='acerca.html#security-tips'">Consejos de Seguridad</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AutoCenterSV. Marca Registrada. Teléfono: +503 2113-0241</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/nathalia.guardado.37?mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/v.aless_22?igsh=MXAzejFoMzdranRrcg=="><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/ere8ru?t=vPzEBpVMJyLkWdhpblfOig&s=08"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/funcion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/alertasLink.js"></script>
+
+</body>
+</html>

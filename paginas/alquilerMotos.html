@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>AutoCenterSV - Catálogo</title>
+    <link rel="stylesheet" href="../css/vista4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.jpg" alt="AutoCenterSV">
+                <h3 id="back" style="color: rgb(250, 247, 242); margin-left:37%; 
+                margin-top: -30%; font-style: italic; font-family: 'Medula One', sans-serif; font-size: 1.3em;">
+                 AutoCenterSV
+               </h3>
+            </div>
+            <div class="search-bar">
+                <select onchange="redirectToPage(this)">
+                    <option value="" disabled selected>Categorías</option>
+                    <option value="compraVenta.html">Inicio</option>
+                    <option value="vehiculosNuevos.html">Autos Nuevos</option>
+                    <option value="autosUsados.html">Autos Usados</option>
+                    <option value="camionesBuses.html">Camiones y Buses</option>
+                    <option value="equipoPesado.html">Equipo Pesado</option>
+                    <option value="motocicletas.html">Motocicletas</option>
+                    <option value="alquilerAutos.html">Alquiler de Autos</option>
+                    <option value="alquilerMotos.html">Alquiler de Motos</option>
+                </select>
+                <input type="text" placeholder="Buscar" id="searchInputSidebar">
+                <button class="buscar" onclick="buscarPagina('searchInputSidebar')"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-location">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>El Salvador</span>
+                </div>
+                <button onclick="window.location.href='publicarAnuncio.html'" class="publicar">Publicar +</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="catalog-container">
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" placeholder="Buscar" id="searchInputSidebar">
+                <button  class="buscar" onclick="buscarPagina('searchInputSidebar')"><i class="fas fa-search"></i></button>
+            </div>
+            <h3>Subcategorías</h3>
+            <ul class="categories">
+                <li><input type="checkbox" > autos usados</li>
+                <li><input type="checkbox" > pza de vehículo</li>
+                <li><input type="checkbox" checked> motos</li>
+                <li><input type="checkbox">camiones / buses</li>
+                <li><input type="checkbox">+ mas</li>
+                <li><input type="checkbox">Todos</li>
+            </ul>
+            <h3>Ubicación</h3>
+            <div class="location-box">
+                <input type="text" placeholder="Ubicación">
+                
+            </div>
+            <button class="mobile-only-btn">Ver mas</button> <!--  BOTON DE VERMAS QUE SOLO SE MUESTRA EN MOVILES -->
+
+            <div class="hidden-mobile">  <!--  El js manda a llamar esta clase para que cuando se haga 
+                                         click en el boton se muestre por medio de    if (hiddenContent.style.display === 'block') {
+--><h3>Precio</h3>
+<div class="range-slider">
+    <input type="range" min="0" max="40000" value="40000" id="priceRange">
+    <span id="priceValue">$40,000</span>
+    
+</div>
+<br>
+
+<h3>Año</h3>
+<div class="range-slider">
+    <input type="range" min="1980" max="2024" value="2024" id="yearRange">
+    <span id="yearValue"> 2024</span>
+</div>
+<br>
+
+
+            
+                <h3>Marca</h3>
+                <ul class="brands">
+                    <li><input type="checkbox"> Hyundai</li>
+                    <li><input type="checkbox"> Honda</li>
+                    
+                    <li><input type="checkbox"> Ford</li>
+                    <li><input type="checkbox"> + MÁS</li>
+                </ul>
+              
+                <h3>Combustible</h3>
+                <ul class="fuel">
+                    <li><input type="checkbox" checked> Gasolina</li>
+                    <li><input type="checkbox"> Diesel</li>
+                    <li><input type="checkbox"> Híbrido</li>
+                    <li><input type="checkbox"> Eléctrico</li>
+                    <li><input type="checkbox"> Todos</li>
+                </ul>
+            </div>
+        </aside>
+        
+        <section class="catalog">
+            <h1>Alquiler de Motocicletas</h1>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="../img/motocileta.png" alt="Producto 1">
+                    <div class="product-info">
+                        <h3>Spitzer 250 R</h3>
+                        <p>
+                            <span style="color: rgb(255, 8, 0); font-size: 1.em;">Presentar Licencia</span>
+                        </p>
+                        <h4>
+                            <span style="color: rgb(5, 5, 5);margin-top: -10%; font-family:'Courier New', Courier, monospace; font-size: 1.em;">Requisito Presentar cascos</span>
+                                
+                                </h4>
+
+                        <p>
+                            <span style="color: rgb(255, 149, 0); padding-left: 2%; font-size: 1.em;">$20.00 / Dia</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <img src="../img/motoCr5.png" alt="Producto 1">
+                    <div class="product-info">
+                        <h3>Nueva CR4N</h3>
+                        <p>
+                            <span style="color: rgb(255, 8, 0); font-size: 1.1em;">Presentar Licencia</span>
+                        </p>
+                        <h4>
+                            <span style="color: rgb(5, 5, 5);margin-top: -10%; font-family:'Courier New', Courier, monospace; font-size: 1.em;">Disponible para 2 personas</span>
+                                
+                                </h4>
+
+                        <p>
+                            <span style="color: rgb(255, 149, 0); padding-left: 2%; font-size: 1.em;">$45.00 / Dia</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="../img/motoCr4.png" alt="Producto 1">
+                    <div class="product-info">
+                        <h3>CR4 260</h3>
+                        <h4>
+                            <span style="color: rgb(255, 149, 0);margin-top: -10%; font-family:'Courier New', Courier, monospace; font-size: 1.em;">PROXIMAMENTE</span>
+                                
+                                </h4>
+
+                        <p>
+                            <span style="color: rgb(255, 149, 0); padding-left: 2%; font-size: 1.em;">$50.000 / Dia</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="../img/motoTrip.png" alt="Producto 1">
+                    <div class="product-info">
+                        <h3>Trip SE 110</h3>
+                        <h4>
+                    <span style="color: rgb(255, 149, 0);margin-top: -10%; font-family:'Courier New', Courier, monospace; font-size: 1.em;">NUEVO MODELO </span>
+                        
+                        </h4>
+                        <p>
+                            <span style="color: rgb(255, 149, 0);padding-left: 2%; font-size: 1.em;"> $30.99 / Dia</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <button onclick="mostrarAnuncios(1)">1</button>
+                <button onclick="mostrarAnuncios(2)">2</button>
+                <button onclick="mostrarAnuncios(3)">3</button>
+                <button onclick="mostrarAnuncios(4)">4</button>
+                <button onclick="mostrarAnuncios(5)">5</button>
+                <button onclick="mostrarAnuncios('next')">Siguiente</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>AUTOCENTERSV</h3>
+                <ul>
+                    <li onclick="showAboutUs()">Acerca de Nosotros</li>
+                    <li onclick="showContactUs()">Contáctenos</li>
+                    <li onclick="showHighlights()">Resaltadores</li>
+                    <li onclick="showBusiness()">AutoCenterSV Business</li>
+                    <li onclick="showBlueBook()">BlueBook</li>
+                    <li onclick="showPropertyStats()">Estadísticas de Propiedades</li>
+                    <li onclick="showBestPractices()">Glosario de mejores prácticas</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>SOPORTE TÉCNICO</h3>
+                <ul>
+                    <li onclick="showMessenger()">Messenger</li>
+                    <li onclick="showWhatsApp()">WhatsApp Messenger</li>
+                    <li onclick="showNews()">Noticias</li>
+                    <li onclick="showUserForum()">Foro de Usuarios</li>
+                    <li onclick="showHelp()">Solicite Ayuda</li>
+                    <li onclick="showRegister()">Registro</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ANUNCIOS CLASIFICADOS</h3>
+                <ul>
+                    <li onclick="showAdPost()">Publique un anuncio</li>
+                    <li onclick="showClassifieds()">Clasificados</li>
+                    <li onclick="showRealEstate()">Bienes Raíces</li>
+                    <li onclick="showAutomobiles()">Automóviles</li>
+                    <li onclick="showRealEstateEn()">Real Estate</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>TÉRMINOS LEGALES</h3>
+                <ul>
+                    <li onclick="window.location.href='acerca.html#security-center'">Centro de Seguridad</li>
+                    <li onclick="window.location.href='acerca.html#privacy-policy'">Política de Privacidad</li>
+                    <li onclick="window.location.href='acerca.html#terms-of-service'">Condiciones del Servicio</li>
+                    <li onclick="window.location.href='acerca.html#fees'">Tarifas</li>
+                    <li onclick="window.location.href='acerca.html#refund-policy'">Políticas de Reembolsos</li>
+                    <li onclick="window.location.href='acerca.html#security-tips'">Consejos de Seguridad</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AutoCenterSV. Marca Registrada. Teléfono: +503 2113-0241</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/nathalia.guardado.37?mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/v.aless_22?igsh=MXAzejFoMzdranRrcg=="><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/ere8ru?t=vPzEBpVMJyLkWdhpblfOig&s=08"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/funcion.js"></script>
+    <script src="../js/alertasBtn.js"></script>
+    <script src="../js/alertasLink.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>

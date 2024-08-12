@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>AutoCenterSV - Publicar Anuncios</title>
+    <link rel="stylesheet" href="../css/vista2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.jpg" alt="AutoCenterSV">
+                <h3 id="back" style="color: rgb(250, 247, 242); margin-left:37%; 
+                margin-top: -30%; font-style: italic; font-family: 'Medula One', sans-serif; font-size: 1.3em;">
+                 AutoCenterSV
+               </h3>
+            </div>
+            <div class="search-bar">
+                <select onchange="redirectToPage(this)">
+                    <option value="" disabled selected>Categorías</option>
+                    <option value="compraVenta.html">Inicio</option>
+                    <option value="vehiculosNuevos.html">Autos Nuevos</option>
+                    <option value="autosUsados.html">Autos Usados</option>
+                    <option value="camionesBuses.html">Camiones y Buses</option>
+                    <option value="equipoPesado.html">Equipo Pesado</option>
+                    <option value="motocicletas.html">Motocicletas</option>
+                    <option value="alquilerAutos.html">Alquiler de Autos</option>
+                    <option value="alquilerMotos.html">Alquiler de Motos</option>
+                </select>
+                <input type="text" placeholder="Buscar" id="searchInputSidebar">
+                <button onclick="buscarPagina('searchInputSidebar')"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-location">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>El Salvador</span>
+                </div>
+                <button onclick="window.location.href='publicarAnuncio.html'" class="publicar">Publicar +</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="publish-ad">
+            <h1>Publicar anuncios gratis</h1>
+            <form class="ad-form">
+                <div class="form-section">
+                    <div class="step">1</div>
+                    <div class="form-group">
+                        <label for="category">Categoría</label>
+                        <div class="selected-category">
+                            <span>Vehículos > Autos usados</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="step">2</div>
+                    <div class="form-group">
+                        <label for="location">Ubicación</label>
+                        <div class="selected-location">
+                            <span>El Salvador</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="step">3</div>
+                    <div class="form-group">
+                        <label for="description">Descripción</label>
+                        <input type="text" id="title" placeholder="Título">
+                        <textarea id="description" placeholder="Escribe una descripción"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="images">Agregar imágenes</label>
+                        <div class="image-upload" onclick="document.getElementById('image-input').click();">
+                            <i class="fas fa-camera"></i>
+                            <span>Agregar imágenes</span>
+                        </div>
+                        <input type="file" id="image-input" accept="image/*" multiple style="display: none;" onchange="previewImages()">
+                        <div class="image-grid" id="image-grid">
+                            <!-- Aquí aparecerán las miniaturas de las imágenes subidas -->
+                        </div>
+                        <button class="upload-more-images">Mostrar más imágenes</button>
+                        <p class="image-info">Peso máximo 2 Mb, jpg, gif, tamaño óptimo 2048px x 450px (4/3)</p>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label for="details">Detalles</label>
+                    <div class="details-grid">
+                        <select>
+                            <option>Marca</option>
+                            <option>Nissan</option>
+                            <option>Toyota</option>
+
+
+                        </select>
+                        <select>
+                            <option>Modelo</option>
+                            <option>Rogue</option>
+                            <option>SUpar Mk4</option>
+
+
+                        </select>
+                        <select>
+                            <option>Precio</option>
+                            <option>$2000</option>
+                            <option>$5000</option>
+                            <option>$10000-$15000</option>
+
+
+
+                        </select>
+                        <select>
+                            <option>Año</option>
+                            <option>2000</option>
+                            <option>2010</option>
+                            <option>2012</option>
+                            <option>2020</option>
+
+
+
+
+                        </select>
+                        <select>
+                            <option>Kilomts.</option>
+                            <option>60,000</option>
+                            <option>80,000</option>
+                            <option>90,000</option>
+
+
+                        </select>
+                        <select>
+                            <option>Combustible</option>
+                            <option>Energia</option>
+                            <option>Gasolina</option>
+                            <option>Diesel</option>
+
+
+                        </select>
+                        <select>
+                            <option>Transmisión</option>
+                            <option>Sencilla</option>
+                            <option>4 X 4</option>
+                            <option>otro</option>
+
+
+
+                        </select>
+                    </div>
+                </div>
+                <div class="form-section contact-section">
+                    <label for="contact">Datos de contacto</label>
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Nombre">
+                    <input type="tel" placeholder="+503 0000-0000">
+                </div>
+                
+                <button class="submit-btn">Guardar y continuar</button>
+            </form>
+        </section>
+
+        <!-- Sección de Servicio al Cliente y Certificados de seguridad -->
+        <section class="customer-service">
+            <div class="customer-service-container">
+                <div class="service">
+                    <h3>Servicio al Cliente</h3>
+                    <div class="service-content">
+                        <button class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                        <p>Lunes a Viernes<br>8:00 am - 5:30 pm</p>
+                        <a href="#">Solicite ayuda aquí</a>
+                    </div>
+                </div>
+                <div class="security">
+                    <h3>Certificados de seguridad</h3>
+                    <img src="../img/candado.png" alt="Comodo Secure">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>AUTOCENTERSV</h3>
+                <ul>
+                    <li onclick="showAboutUs()">Acerca de Nosotros</li>
+                    <li onclick="showContactUs()">Contáctenos</li>
+                    <li onclick="showHighlights()">Resaltadores</li>
+                    <li onclick="showBusiness()">AutoCenterSV Business</li>
+                    <li onclick="showBlueBook()">BlueBook</li>
+                    <li onclick="showPropertyStats()">Estadísticas de Propiedades</li>
+                    <li onclick="showBestPractices()">Glosario de mejores prácticas</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>SOPORTE TÉCNICO</h3>
+                <ul>
+                    <li onclick="showMessenger()">Messenger</li>
+                    <li onclick="showWhatsApp()">WhatsApp Messenger</li>
+                    <li onclick="showNews()">Noticias</li>
+                    <li onclick="showUserForum()">Foro de Usuarios</li>
+                    <li onclick="showHelp()">Solicite Ayuda</li>
+                    <li onclick="showRegister()">Registro</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ANUNCIOS CLASIFICADOS</h3>
+                <ul>
+                    <li onclick="showAdPost()">Publique un anuncio</li>
+                    <li onclick="showClassifieds()">Clasificados</li>
+                    <li onclick="showRealEstate()">Bienes Raíces</li>
+                    <li onclick="showAutomobiles()">Automóviles</li>
+                    <li onclick="showRealEstateEn()">Real Estate</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>TÉRMINOS LEGALES</h3>
+                <ul>
+                    <li onclick="window.location.href='acerca.html#security-center'">Centro de Seguridad</li>
+                    <li onclick="window.location.href='acerca.html#privacy-policy'">Política de Privacidad</li>
+                    <li onclick="window.location.href='acerca.html#terms-of-service'">Condiciones del Servicio</li>
+                    <li onclick="window.location.href='acerca.html#fees'">Tarifas</li>
+                    <li onclick="window.location.href='acerca.html#refund-policy'">Políticas de Reembolsos</li>
+                    <li onclick="window.location.href='acerca.html#security-tips'">Consejos de Seguridad</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AutoCenterSV. Marca Registrada. Teléfono: +503 2113-0241</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/nathalia.guardado.37?mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/v.aless_22?igsh=MXAzejFoMzdranRrcg=="><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/ere8ru?t=vPzEBpVMJyLkWdhpblfOig&s=08"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/funcion.js"></script>
+    <script src="../js/alertasBtn.js"></script>
+    <script src="../js/alertasLink.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+<script src="../js/funcion.js"></script>
+</html>
